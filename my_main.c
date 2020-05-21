@@ -359,7 +359,7 @@ void my_main() {
 	case ROTATE:
 	  theta =  op[i].op.rotate.degrees * (M_PI / 180);
 	  if (op[i].op.rotate.p != NULL) {
-	    printf("%lf ",frameval);
+	    double frameval = lookup_symbol(op[i].op.rotate.p->name)->s.value;
 	    theta = theta * frameval;
 	  }
 
